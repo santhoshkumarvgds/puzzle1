@@ -66,7 +66,7 @@ $(document).ready(function () {
 
               if (localStorage.checkvalue != undefined) {
                     var conditionval=JSON.parse(localStorage.getItem("score"));
-                    if (Number(conditionval) < value) {
+                    if (Number(conditionval) <= value) {
                         localStorage.setItem("nameoftheperson", JSON.stringify(nameoftheperson));
                         localStorage.setItem("score", JSON.stringify(value));
                     }
