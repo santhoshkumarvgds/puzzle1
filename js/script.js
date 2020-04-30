@@ -82,7 +82,7 @@ $(document).ready(function () {
             window.location.reload();
         }
         else  if(countallclick<9) {
-            alert("Please fill "+countallclick+" more box");
+            alert("Please fill "+(9-countallclick)+" more box");
         }
         else{
             alert("You're loss! Try again");
