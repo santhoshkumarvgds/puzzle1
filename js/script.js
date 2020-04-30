@@ -61,16 +61,18 @@ $(document).ready(function () {
         if (count == 9) {
             var value = 19 - score;
             if (value > 0) {
-                alert("you're WIN\nYour score is"+value);
+                alert("you're WIN\nYour score is "+value);
                 var nameoftheperson = prompt("ENTER YOUR NAME");
-                localStorage.setItem("nameoftheperson", JSON.stringify(nameoftheperson));
-                if (localStorage.checkvalue != undefined) {
+
+              if (localStorage.checkvalue != undefined) {
                     var conditionval=JSON.parse(localStorage.getItem("score"));
                     if (Number(conditionval) < value) {
+                        localStorage.setItem("nameoftheperson", JSON.stringify(nameoftheperson));
                         localStorage.setItem("score", JSON.stringify(value));
                     }
                 }
                 else {
+                    localStorage.setItem("nameoftheperson", JSON.stringify(nameoftheperson));
                     localStorage.setItem("score", JSON.stringify(value));
                 }
                 localStorage.checkvalue=1;
@@ -80,7 +82,7 @@ $(document).ready(function () {
             window.location.reload();
         }
         else  if(countallclick<9) {
-            alert("Please fill all box");
+            alert("Please fill "+countallclick+" more box");
         }
         else{
             alert("You're loss! Try again");
