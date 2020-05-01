@@ -39,10 +39,15 @@ $(document).ready(function () {
            $(this).css({
             padding: "0px"
         });
-            $("img", this).attr("src", imgsrc);
+            
            }
+        else{
+            $(this).css({
+            padding: "43px 0px"
+        });
+        }
 
-        
+        $("img", this).attr("src", imgsrc);
         imgsrc = null;
         // $(thisval).removeAttr("src");
     });
