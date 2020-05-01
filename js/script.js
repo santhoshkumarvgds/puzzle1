@@ -39,9 +39,10 @@ $(document).ready(function () {
            $(this).css({
             padding: "0px"
         });
+            $("img", this).attr("src", imgsrc);
            }
 
-        $("img", this).attr("src", imgsrc);
+        
         imgsrc = null;
         // $(thisval).removeAttr("src");
     });
